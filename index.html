@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Flowise Chatbot Embed</title>
+  <title>Flowise Chatbot AI</title>
   <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
     Chatbot.initFull({
@@ -14,10 +14,37 @@
     body {
       margin: 0;
       font-family: sans-serif;
+      background: #f9f9f9;
+    }
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .info {
+      background: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Flowise Chatbot AI</h1>
+  </header>
+
+  <div class="info">
+    <p><strong>Petunjuk Penggunaan:</strong></p>
+    <ul>
+      <li>Jika upload <strong>1 gambar</strong>, AI akan menganalisa gambarmu.</li>
+      <li>Jika upload <strong>lebih dari 1 gambar</strong>, gambar pertama adalah <em>referensi</em> yang akan AI gunakan untuk <strong>membandingkan antara referensi dan implementasi</strong>.</li>
+    </ul>
+  </div>
+
   <flowise-fullchatbot></flowise-fullchatbot>
 </body>
 </html>
